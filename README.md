@@ -5,4 +5,5 @@ Pod Version: 1.5.3
 Pods included:
 
 - Alamofire
+- Alamofire Network Activity Indicator
 - SwiftyJSON
