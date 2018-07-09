@@ -12,9 +12,12 @@
 		A1EFCED920F36E930017787E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1EFCED720F36E930017787E /* Main.storyboard */; };
 		A1EFCEDB20F36E940017787E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1EFCEDA20F36E940017787E /* Assets.xcassets */; };
 		A1EFCEDE20F36E940017787E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1EFCEDC20F36E940017787E /* LaunchScreen.storyboard */; };
+		E2D6867FA5D6C5CAEF846BAD /* Pods_Question_Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73E5524A39F85EC25F40F1D /* Pods_Question_Library.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43B3CDF7C462791882B16E0B /* Pods-Question_Library.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Question_Library.release.xcconfig"; path = "Pods/Target Support Files/Pods-Question_Library/Pods-Question_Library.release.xcconfig"; sourceTree = "<group>"; };
+		709B6F9CDD51F115BF6D05A9 /* Pods-Question_Library.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Question_Library.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Question_Library/Pods-Question_Library.debug.xcconfig"; sourceTree = "<group>"; };
 		A1EFCED020F36E930017787E /* Question_Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Question_Library.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EFCED320F36E930017787E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1EFCED520F36E930017787E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		A1EFCEDA20F36E940017787E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1EFCEDD20F36E940017787E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1EFCEDF20F36E940017787E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D73E5524A39F85EC25F40F1D /* Pods_Question_Library.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Question_Library.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2D6867FA5D6C5CAEF846BAD /* Pods_Question_Library.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				A1EFCED220F36E930017787E /* Question_Library */,
 				A1EFCED120F36E930017787E /* Products */,
+				BA90BF58C30719EFB8F47CB6 /* Pods */,
+				F94B3C31E51D5CCC686A0900 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = Question_Library;
 			sourceTree = "<group>";
 		};
+		BA90BF58C30719EFB8F47CB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				709B6F9CDD51F115BF6D05A9 /* Pods-Question_Library.debug.xcconfig */,
+				43B3CDF7C462791882B16E0B /* Pods-Question_Library.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F94B3C31E51D5CCC686A0900 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D73E5524A39F85EC25F40F1D /* Pods_Question_Library.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1EFCEE220F36E940017787E /* Build configuration list for PBXNativeTarget "Question_Library" */;
 			buildPhases = (
+				E60E9B13AA2F7D07FDEE7D4C /* [CP] Check Pods Manifest.lock */,
 				A1EFCECC20F36E930017787E /* Sources */,
 				A1EFCECD20F36E930017787E /* Frameworks */,
 				A1EFCECE20F36E930017787E /* Resources */,
@@ -129,6 +154,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E60E9B13AA2F7D07FDEE7D4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Question_Library-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A1EFCECC20F36E930017787E /* Sources */ = {
@@ -278,15 +324,13 @@
 		};
 		A1EFCEE320F36E940017787E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 709B6F9CDD51F115BF6D05A9 /* Pods-Question_Library.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5M8TN3N755;
 				INFOPLIST_FILE = Question_Library/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oliv.in.da.house.Question-Library";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +340,13 @@
 		};
 		A1EFCEE420F36E940017787E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43B3CDF7C462791882B16E0B /* Pods-Question_Library.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5M8TN3N755;
 				INFOPLIST_FILE = Question_Library/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oliv.in.da.house.Question-Library";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
