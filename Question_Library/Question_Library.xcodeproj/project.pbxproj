@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A1870ECF20F3746D009F4920 /* LoadingScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1870ECE20F3746D009F4920 /* LoadingScreenVC.swift */; };
+		A1870ED220F38D0E009F4920 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1870ED120F38D0E009F4920 /* Constants.swift */; };
+		A1870ED820F3914D009F4920 /* QuestionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1870ED720F3914D009F4920 /* QuestionListVC.swift */; };
+		A1870EDE20F3AEE3009F4920 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1870EDD20F3AEE3009F4920 /* NetworkManager.swift */; };
+		A1870EE020F3C538009F4920 /* NoConnectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1870EDF20F3C538009F4920 /* NoConnectionVC.swift */; };
 		A1EFCED420F36E930017787E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFCED320F36E930017787E /* AppDelegate.swift */; };
 		A1EFCED920F36E930017787E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1EFCED720F36E930017787E /* Main.storyboard */; };
 		A1EFCEDB20F36E940017787E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1EFCEDA20F36E940017787E /* Assets.xcassets */; };
@@ -19,7 +23,11 @@
 		43B3CDF7C462791882B16E0B /* Pods-Question_Library.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Question_Library.release.xcconfig"; path = "Pods/Target Support Files/Pods-Question_Library/Pods-Question_Library.release.xcconfig"; sourceTree = "<group>"; };
 		709B6F9CDD51F115BF6D05A9 /* Pods-Question_Library.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Question_Library.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Question_Library/Pods-Question_Library.debug.xcconfig"; sourceTree = "<group>"; };
 		A1870ECE20F3746D009F4920 /* LoadingScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenVC.swift; sourceTree = "<group>"; };
-		A1870ED020F386CF009F4920 /* CommonValues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonValues.h; sourceTree = "<group>"; };
+		A1870ED120F38D0E009F4920 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A1870ED720F3914D009F4920 /* QuestionListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListVC.swift; sourceTree = "<group>"; };
+		A1870EDA20F391AD009F4920 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		A1870EDD20F3AEE3009F4920 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A1870EDF20F3C538009F4920 /* NoConnectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectionVC.swift; sourceTree = "<group>"; };
 		A1EFCED020F36E930017787E /* Question_Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Question_Library.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EFCED320F36E930017787E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1EFCED820F36E930017787E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,7 +76,10 @@
 				A1EFCEDC20F36E940017787E /* LaunchScreen.storyboard */,
 				A1EFCEDF20F36E940017787E /* Info.plist */,
 				A1870ECE20F3746D009F4920 /* LoadingScreenVC.swift */,
-				A1870ED020F386CF009F4920 /* CommonValues.h */,
+				A1870ED720F3914D009F4920 /* QuestionListVC.swift */,
+				A1870ED120F38D0E009F4920 /* Constants.swift */,
+				A1870EDD20F3AEE3009F4920 /* NetworkManager.swift */,
+				A1870EDF20F3C538009F4920 /* NoConnectionVC.swift */,
 			);
 			path = Question_Library;
 			sourceTree = "<group>";
@@ -167,11 +178,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Question_Library/Pods-Question_Library-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,8 +217,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1870EDE20F3AEE3009F4920 /* NetworkManager.swift in Sources */,
+				A1870ED820F3914D009F4920 /* QuestionListVC.swift in Sources */,
 				A1870ECF20F3746D009F4920 /* LoadingScreenVC.swift in Sources */,
+				A1870EE020F3C538009F4920 /* NoConnectionVC.swift in Sources */,
 				A1EFCED420F36E930017787E /* AppDelegate.swift in Sources */,
+				A1870ED220F38D0E009F4920 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +233,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A1EFCED820F36E930017787E /* Base */,
+				A1870EDA20F391AD009F4920 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -350,7 +368,6 @@
 			baseConfigurationReference = 709B6F9CDD51F115BF6D05A9 /* Pods-Question_Library.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5M8TN3N755;
 				INFOPLIST_FILE = Question_Library/Info.plist;
@@ -371,7 +388,6 @@
 			baseConfigurationReference = 43B3CDF7C462791882B16E0B /* Pods-Question_Library.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5M8TN3N755;
 				INFOPLIST_FILE = Question_Library/Info.plist;
